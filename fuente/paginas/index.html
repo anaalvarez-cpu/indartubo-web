@@ -1,0 +1,158 @@
+---
+titulo: Hierros, caños y chapas en San Justo | Indartubo
+descripcion: Hierros, caños estructurales, tubos, perfiles y chapas para techos. Mayor stock, entrega en 48 hs en Capital y GBA y financiación con tarjeta. Pedí tu presupuesto.
+ruta: /
+foto_redes: hierros-te
+---
+<main>
+
+  <!-- 1. HERO -->
+  <section class="hero">
+    <!-- Foto del hero: cuando llegue, reemplazar el div.foto-pendiente por:
+         <img src="img/hero/hero-1600.webp" srcset="img/hero/hero-800.webp 800w, img/hero/hero-1600.webp 1600w"
+              sizes="100vw" width="1600" height="900" alt="..." fetchpriority="high">
+         y sumar la clase hero__fondo--con-foto al contenedor (oscurece la foto para que el texto se lea). -->
+    <div class="hero__fondo">
+      <div class="foto-pendiente foto-pendiente--oscura" aria-hidden="true"><span>Foto: hero (alta resolución)</span></div>
+    </div>
+    <div class="contenedor hero__grilla">
+      <div class="hero__texto">
+        <p class="hero__antetitulo">Siderometalúrgica en San Justo</p>
+        <h1>Hierros, caños y chapas con entrega en 48&nbsp;hs</h1>
+        <p class="hero__bajada">El mayor stock del mercado para obras, industrias y particulares. Entregamos en Capital y GBA con flota propia.</p>
+        <p class="hero__extra"><a class="hero__link" href="#productos">Ver productos <span aria-hidden="true">→</span></a></p>
+      </div>
+      <!-- Formulario: único de la página. Todos los "Pedí tu presupuesto" y "Cotizar ..." llevan acá. -->
+      <div class="hero__formulario" id="presupuesto">
+        {{> formulario }}
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. DIFERENCIALES -->
+  {{> diferenciales }}
+
+  <!-- 3. PRODUCTOS -->
+  <section class="seccion seccion--gris" id="productos" aria-labelledby="productos-titulo">
+    <div class="contenedor">
+      <h2 id="productos-titulo">Nuestros productos</h2>
+      <p class="seccion__bajada">Elegí lo que necesitás y te cotizamos en el acto. Todas las medidas, en stock.</p>
+      <ul class="productos__grilla">
+        <li class="tarjeta">
+          <div class="tarjeta__marco"><img class="tarjeta__foto" {{ foto hierros-te 400,800 }} sizes="(min-width: 1024px) 384px, (min-width: 640px) 50vw, 100vw" width="400" height="300" loading="lazy" alt="Hierros Te y ángulos apilados con las puntas pintadas de amarillo"></div>
+          <div class="tarjeta__cuerpo">
+            <h3>Hierros</h3>
+            <p>Ángulos, planchuelas, redondo liso, cuadrado y Te. Largos de 6 y 12&nbsp;m.</p>
+          </div>
+          <div class="tarjeta__acciones">
+            <a class="boton" href="/hierros">Cotizar hierros</a>
+          </div>
+        </li>
+        <li class="tarjeta">
+          <div class="tarjeta__marco"><img class="tarjeta__foto" {{ foto canos-cuadrados 400,800 }} sizes="(min-width: 1024px) 384px, (min-width: 640px) 50vw, 100vw" width="400" height="300" loading="lazy" alt="Caños estructurales cuadrados apilados en el depósito"></div>
+          <div class="tarjeta__cuerpo">
+            <h3>Caños y tubos</h3>
+            <p>Caños estructurales de 0,9 a 6,35&nbsp;mm y tubos SCH 40 / SCH 80, negros y galvanizados.</p>
+          </div>
+          <div class="tarjeta__acciones">
+            <a class="boton" href="/caños-estructurales">Cotizar caños y tubos</a>
+          </div>
+        </li>
+        <li class="tarjeta tarjeta--destacada">
+          <span class="tarjeta__etiqueta">Destacado</span>
+          <div class="tarjeta__marco"><img class="tarjeta__foto" {{ foto techos-trapezoidal 400,800 }} sizes="(min-width: 1024px) 384px, (min-width: 640px) 50vw, 100vw" width="400" height="300" loading="lazy" alt="Chapas para techo sinusoidal y trapezoidal"></div>
+          <div class="tarjeta__cuerpo">
+            <h3>Chapas para techos</h3>
+            <p>Acanalada, sinusoidal y trapezoidal T101, en cincalum o prepintada. Largos de 1 a 13&nbsp;m.</p>
+          </div>
+          <div class="tarjeta__acciones">
+            <a class="boton" href="/chapa-para-techos">Cotizar chapas para techos</a>
+          </div>
+        </li>
+        <li class="tarjeta">
+          <div class="tarjeta__marco"><img class="tarjeta__foto" {{ foto perfiles-upn 400,800 }} sizes="(min-width: 1024px) 384px, (min-width: 640px) 50vw, 100vw" width="400" height="300" loading="lazy" alt="Perfiles UPN apilados con las puntas pintadas de naranja"></div>
+          <div class="tarjeta__cuerpo">
+            <h3>Perfiles</h3>
+            <p>IPN, UPN, Grey, W y U chico, nacionales e importados, del 100 al 600.</p>
+          </div>
+          <div class="tarjeta__acciones">
+            <a class="boton" href="/perfiles">Cotizar perfiles</a>
+          </div>
+        </li>
+        <li class="tarjeta">
+          <div class="tarjeta__marco"><img class="tarjeta__foto" {{ foto chapas-semilladas 400,800 }} sizes="(min-width: 1024px) 384px, (min-width: 640px) 50vw, 100vw" width="400" height="300" loading="lazy" alt="Pila de chapas antideslizantes semilladas"></div>
+          <div class="tarjeta__cuerpo">
+            <h3>Chapas</h3>
+            <p>Lisas, gruesas, perforadas y semilladas. De 1&nbsp;×&nbsp;2&nbsp;m a 1,5&nbsp;×&nbsp;6&nbsp;m.</p>
+          </div>
+          <div class="tarjeta__acciones">
+            <a class="boton" href="/chapas">Cotizar chapas</a>
+          </div>
+        </li>
+        <li class="tarjeta tarjeta--consulta">
+          <div class="tarjeta__cuerpo">
+            <svg class="tarjeta__icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l4-4 14 14-4 4z"/><path d="M8 6l2 2M11 9l1 1M12 4l2 2M15 7l1 1M5 9l2 2"/></svg>
+            <h3>¿Buscás otra medida?</h3>
+            <p>Tenemos la mayor variedad de stock del mercado. Contanos qué necesitás y lo cotizamos.</p>
+            <p>Si no sabés la medida exacta, describí tu obra y te asesoramos.</p>
+          </div>
+          <div class="tarjeta__acciones">
+            <a class="boton" href="#presupuesto">Hacer una consulta</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- 4. QUIÉNES SOMOS -->
+  <section class="seccion" id="nosotros" aria-labelledby="nosotros-titulo">
+    <div class="contenedor nosotros__grilla">
+      <div>
+        <h2 id="nosotros-titulo">¿Quiénes somos?</h2>
+        <p>Somos una empresa siderometalúrgica con <strong>50 años</strong> de presencia en el mercado, reconocida por su <strong>trayectoria, calidad y servicio</strong>.</p>
+        <p>Brindamos la mejor solución del mercado con foco en el cliente: atención personalizada, la mayor variedad de stock, entrega en 48 hs y facilidades de financiación.</p>
+        <p>En nuestro showroom tenés un muestrario de las medidas en stock para definir y simplificar tu compra.</p>
+      </div>
+      <!-- Collage: fotos reales superpuestas + bloque amarillo detrás + dato destacado.
+           Cuando lleguen las fotos de camión / showroom pueden reemplazar a las secundarias. -->
+      <div class="collage">
+        <span class="collage__bloque" aria-hidden="true"></span>
+        <img class="collage__foto collage__foto--principal" {{ foto empresa-deposito 340,680 }} sizes="(min-width: 1024px) 490px, (min-width: 640px) 76vw, 100vw" width="680" height="450" loading="lazy" alt="Nave del depósito de Indartubo con puentes grúa y estanterías llenas de stock">
+        <img class="collage__foto collage__foto--b" {{ foto empresa-autoelevador 340,680 }} sizes="(min-width: 1024px) 290px, (min-width: 640px) 44vw, 50vw" width="340" height="225" loading="lazy" alt="Autoelevador moviendo una pila de chapas en el depósito">
+        <img class="collage__foto collage__foto--c" {{ foto empresa-frente 340,680 }} sizes="(min-width: 1024px) 250px, (min-width: 640px) 38vw, 50vw" width="340" height="225" loading="lazy" alt="Frente del edificio de Indartubo en San Justo, con acceso para camiones">
+        <p class="collage__dato">
+          <strong class="collage__numero" data-contar-hasta="50" aria-hidden="true">50</strong>
+          <span class="collage__leyenda" aria-hidden="true">años de trayectoria</span>
+          <span class="solo-lectores">50 años de trayectoria</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. DÓNDE ESTAMOS -->
+  <section class="seccion seccion--gris ubicacion" id="ubicacion" aria-labelledby="ubicacion-titulo">
+    <div class="contenedor ubicacion__grilla">
+      <div>
+        <h2 id="ubicacion-titulo">¿Dónde estamos?</h2>
+        <address>Diego Armando Maradona 3441<br>San Justo, Pcia. de Buenos Aires</address>
+        <a class="boton boton--secundario" href="https://www.google.com/maps/dir/?api=1&amp;destination=Diego+Armando+Maradona+3441,+San+Justo,+Buenos+Aires" target="_blank" rel="noopener">Cómo llegar</a>
+        <h3>Horario de atención</h3>
+        <dl class="horarios">
+          <dt>Lun a Vie</dt><dd>8:00 a 12:00 y 14:00 a 17:00</dd>
+          <dt>Sábado</dt><dd>8:30 a 12:00</dd>
+          <dt>Domingo</dt><dd>Cerrado</dd>
+        </dl>
+        <h3>Mail</h3>
+        <p><a href="mailto:ventas@indartubo.com.ar">ventas@indartubo.com.ar</a></p>
+      </div>
+      <div class="ubicacion__mapa">
+        <iframe src="https://maps.google.com/maps?q=Diego+Armando+Maradona+3441,+San+Justo,+Buenos+Aires&amp;z=15&amp;output=embed" width="700" height="420" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa: Indartubo, Diego Armando Maradona 3441, San Justo"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Datos estructurados del negocio (solo en la home) -->
+{{> schema }}

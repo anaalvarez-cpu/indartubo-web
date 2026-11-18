@@ -1,0 +1,5 @@
+# Solo entran a la imagen nginx.conf y sitio/
+*
+!nginx.conf
+!sitio/
+!sitio/**

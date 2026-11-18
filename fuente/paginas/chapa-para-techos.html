@@ -1,0 +1,83 @@
+---
+titulo: Chapas para techos en San Justo | Indartubo
+descripcion: Chapas para techos acanaladas, sinusoidales y trapezoidales T101 en cincalum, prepintadas o plásticas, de 1 a 13 m. Tornillos y aislantes. Entrega en 48 hs.
+ruta: /chapa-para-techos
+producto: Chapas para techos
+foto_redes: techos-trapezoidal
+ejemplo_consulta: Ej.: 12 chapas trapezoidales de 4 m, prepintadas, entrega en Merlo.
+---
+<main>
+
+  <!-- HERO del producto (compacto) con el formulario y el producto ya seleccionado -->
+  <section class="hero hero--producto">
+    <div class="hero__fondo hero__fondo--con-foto">
+      <img {{ foto techos-trapezoidal 800,1600 }} sizes="100vw" width="1600" height="1067" alt="" fetchpriority="high">
+    </div>
+    <div class="contenedor hero__grilla">
+      <div class="hero__texto">
+        <nav class="migas" aria-label="Estás en">
+          <ol><li><a href="/">Inicio</a></li><li aria-current="page">Chapas para techos</li></ol>
+        </nav>
+        <h1>Chapas para techos</h1>
+        <p class="hero__bajada">Acanalada, sinusoidal y trapezoidal T101, en cincalum, prepintadas o plásticas, de 1 a 13&nbsp;m de largo. También tornillos, aislantes y perfil C.</p>
+        <p class="hero__extra"><a class="hero__link" href="#variedades">Ver variedades <span aria-hidden="true">→</span></a></p>
+      </div>
+      <div class="hero__formulario" id="presupuesto">
+        {{> formulario }}
+      </div>
+    </div>
+  </section>
+
+  {{> diferenciales }}
+
+  <!-- VARIEDADES: cada tarjeta baja al formulario y completa "Consulta por: ..." -->
+  <section class="seccion" id="variedades" aria-labelledby="variedades-titulo">
+    <div class="contenedor">
+      <h2 id="variedades-titulo" class="titulo-con-linea">Variedades</h2>
+      <p class="seccion__bajada">Chapas y accesorios para techos. Tocá una para cotizarla.</p>
+      <ul class="variedades">
+        <li><a class="variedad" href="#presupuesto" data-variedad="Acanalada / sinusoidal"><img class="variedad__foto" {{ foto techos-sinusoidal 300,450 }} sizes="(min-width: 1024px) 220px, (min-width: 640px) 33vw, 50vw" width="450" height="300" loading="lazy" alt="Chapas para techo sinusoidales y trapezoidales apiladas"><span class="variedad__pie"><span class="variedad__nombre">Acanalada / sinusoidal</span><span class="variedad__cta" aria-hidden="true">Cotizar →</span><span class="solo-lectores">, cotizar</span></span></a></li>
+        <li><a class="variedad" href="#presupuesto" data-variedad="Trapezoidal (T101)"><img class="variedad__foto" {{ foto techos-trapezoidal 300,450 }} sizes="(min-width: 1024px) 220px, (min-width: 640px) 33vw, 50vw" width="450" height="300" loading="lazy" alt="Chapas para techo trapezoidales y sinusoidales"><span class="variedad__pie"><span class="variedad__nombre">Trapezoidal (T101)</span><span class="variedad__cta" aria-hidden="true">Cotizar →</span><span class="solo-lectores">, cotizar</span></span></a></li>
+        <li><a class="variedad" href="#presupuesto" data-variedad="Tornillos autoperforantes"><div class="variedad__foto foto-pendiente" aria-hidden="true"><span>Foto: tornillos autoperforantes</span></div><span class="variedad__pie"><span class="variedad__nombre">Tornillos autoperforantes</span><span class="variedad__cta" aria-hidden="true">Cotizar →</span><span class="solo-lectores">, cotizar</span></span></a></li>
+        <li><a class="variedad" href="#presupuesto" data-variedad="Aislantes"><div class="variedad__foto foto-pendiente" aria-hidden="true"><span>Foto: aislantes</span></div><span class="variedad__pie"><span class="variedad__nombre">Aislantes</span><span class="variedad__cta" aria-hidden="true">Cotizar →</span><span class="solo-lectores">, cotizar</span></span></a></li>
+        <li><a class="variedad" href="#presupuesto" data-variedad="Perfil C"><div class="variedad__foto foto-pendiente" aria-hidden="true"><span>Foto: perfil c</span></div><span class="variedad__pie"><span class="variedad__nombre">Perfil C</span><span class="variedad__cta" aria-hidden="true">Cotizar →</span><span class="solo-lectores">, cotizar</span></span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- MEDIDAS / LARGOS Y ENTREGA -->
+  <section class="seccion seccion--gris" aria-labelledby="medidas-titulo">
+    <div class="contenedor ficha">
+      <div class="ficha__bloque">
+        <h2 id="medidas-titulo" class="titulo-con-linea">Medidas y terminación</h2>
+        <dl class="datos">
+          <dt>Terminación</dt><dd>Cincalum, prepintadas o plásticas</dd>
+          <dt>Accesorios</dt><dd>Tornillos autoperforantes, aislantes y perfil C</dd>
+        </dl>
+      </div>
+      <div class="ficha__bloque">
+        <h2 class="titulo-con-linea">Largos y entrega</h2>
+        <dl class="datos">
+          <dt>Largos</dt><dd>De 1 a 13 metros</dd>
+          <dt>Entrega</dt><dd>En 48 hs en Capital y GBA, con flota propia</dd>
+          <dt>Pago</dt><dd>Financiación con tarjeta</dd>
+        </dl>
+        <a class="boton" href="#presupuesto">Pedí tu presupuesto de chapas para techos</a>
+      </div>
+    </div>
+  </section>
+
+  {{> otros-productos }}
+
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "{{ sitio_url }}/" },
+    { "@type": "ListItem", "position": 2, "name": "Chapas para techos", "item": "{{ url_canonica }}" }
+  ]
+}
+</script>

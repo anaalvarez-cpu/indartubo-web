@@ -1,0 +1,6 @@
+# Lo que se sube a Cloud Build con "gcloud run deploy --source ."
+*
+!Dockerfile
+!nginx.conf
+!sitio/
+!sitio/**

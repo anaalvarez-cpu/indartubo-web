@@ -1,0 +1,86 @@
+---
+titulo: Tubos para conducción y uso mecánico en San Justo | Indartubo
+descripcion: Tubos SCH 40, SCH 80, sin costura e IRAM 2502, negros o galvanizados, roscados o biselados. Largos de 6,4 m. Entrega en 48 hs en Capital y GBA.
+ruta: /tubos
+producto: Tubos
+foto_redes: tubos-redondos
+ejemplo_consulta: Ej.: 10 tubos SCH 40 de 2 pulgadas, galvanizados, entrega en Ramos Mejía.
+---
+<main>
+
+  <!-- HERO del producto (compacto) con el formulario y el producto ya seleccionado -->
+  <section class="hero hero--producto">
+    <div class="hero__fondo hero__fondo--con-foto">
+      <img {{ foto tubos-redondos 800,1600 }} sizes="100vw" width="1600" height="1067" alt="" fetchpriority="high">
+    </div>
+    <div class="contenedor hero__grilla">
+      <div class="hero__texto">
+        <nav class="migas" aria-label="Estás en">
+          <ol><li><a href="/">Inicio</a></li><li aria-current="page">Tubos</li></ol>
+        </nav>
+        <h1>Tubos</h1>
+        <p class="hero__bajada">Para conducción y uso mecánico: SCH 40, SCH 80, sin costura e IRAM 2502, negros o galvanizados. Entregamos en Capital y GBA en 48&nbsp;hs.</p>
+        <p class="hero__extra"><a class="hero__link" href="#variedades">Ver variedades <span aria-hidden="true">→</span></a></p>
+      </div>
+      <div class="hero__formulario" id="presupuesto">
+        {{> formulario }}
+      </div>
+    </div>
+  </section>
+
+  {{> diferenciales }}
+
+  <!-- VARIEDADES: cada tarjeta baja al formulario y completa "Consulta por: ..." -->
+  <section class="seccion" id="variedades" aria-labelledby="variedades-titulo">
+    <div class="contenedor">
+      <h2 id="variedades-titulo" class="titulo-con-linea">Variedades</h2>
+      <p class="seccion__bajada">Tubos para conducción y uso mecánico en todas sus normas y terminaciones. Tocá una para cotizarla.</p>
+      <ul class="variedades variedades--texto">
+        <li><a class="variedad" href="#presupuesto" data-variedad="SCH 40"><span class="variedad__pie"><span class="variedad__nombre">SCH 40</span><span class="variedad__cta" aria-hidden="true">Cotizar →</span><span class="solo-lectores">, cotizar</span></span></a></li>
+        <li><a class="variedad" href="#presupuesto" data-variedad="SCH 80"><span class="variedad__pie"><span class="variedad__nombre">SCH 80</span><span class="variedad__cta" aria-hidden="true">Cotizar →</span><span class="solo-lectores">, cotizar</span></span></a></li>
+        <li><a class="variedad" href="#presupuesto" data-variedad="Negros"><span class="variedad__pie"><span class="variedad__nombre">Negros</span><span class="variedad__cta" aria-hidden="true">Cotizar →</span><span class="solo-lectores">, cotizar</span></span></a></li>
+        <li><a class="variedad" href="#presupuesto" data-variedad="Galvanizados"><span class="variedad__pie"><span class="variedad__nombre">Galvanizados</span><span class="variedad__cta" aria-hidden="true">Cotizar →</span><span class="solo-lectores">, cotizar</span></span></a></li>
+        <li><a class="variedad" href="#presupuesto" data-variedad="Sin costura"><span class="variedad__pie"><span class="variedad__nombre">Sin costura</span><span class="variedad__cta" aria-hidden="true">Cotizar →</span><span class="solo-lectores">, cotizar</span></span></a></li>
+        <li><a class="variedad" href="#presupuesto" data-variedad="IRAM 2502"><span class="variedad__pie"><span class="variedad__nombre">IRAM 2502</span><span class="variedad__cta" aria-hidden="true">Cotizar →</span><span class="solo-lectores">, cotizar</span></span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- MEDIDAS / LARGOS Y ENTREGA -->
+  <section class="seccion seccion--gris" aria-labelledby="medidas-titulo">
+    <div class="contenedor ficha">
+      <div class="ficha__bloque">
+        <h2 id="medidas-titulo" class="titulo-con-linea">Medidas y terminación</h2>
+        <dl class="datos">
+          <dt>Medidas</dt><dd>Toda la variedad de medidas para conducción y uso mecánico</dd>
+          <dt>Espesores</dt><dd>Toda la gama de espesores</dd>
+          <dt>Terminación</dt><dd>Galvanizado, negro, roscado o biselado</dd>
+          <dt>Prueba hidráulica</dt><dd>Con y sin prueba hidráulica</dd>
+        </dl>
+      </div>
+      <div class="ficha__bloque">
+        <h2 class="titulo-con-linea">Largos y entrega</h2>
+        <dl class="datos">
+          <dt>Largos</dt><dd>6,4 metros</dd>
+          <dt>Entrega</dt><dd>En 48 hs en Capital y GBA, con flota propia</dd>
+          <dt>Pago</dt><dd>Financiación con tarjeta</dd>
+        </dl>
+        <a class="boton" href="#presupuesto">Pedí tu presupuesto de tubos</a>
+      </div>
+    </div>
+  </section>
+
+  {{> otros-productos }}
+
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "{{ sitio_url }}/" },
+    { "@type": "ListItem", "position": 2, "name": "Tubos", "item": "{{ url_canonica }}" }
+  ]
+}
+</script>

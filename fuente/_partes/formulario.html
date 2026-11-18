@@ -1,0 +1,47 @@
+<!-- ÚNICO formulario de la página. Destino: form_endpoint en fuente/config.json.
+     Para sumar un campo (ej. "Tipo de comprador"), agregar otro bloque .campo:
+     el envío toma automáticamente todos los campos que tengan name. -->
+<form class="formulario" id="formulario-presupuesto" action="{{ form_endpoint }}" method="post" novalidate tabindex="-1" aria-labelledby="presupuesto-titulo">
+  <h2 class="formulario__titulo" id="presupuesto-titulo">Presupuestamos en el acto</h2>
+  <p class="formulario__bajada">Dejanos tus datos y te respondemos a la brevedad, por mail o teléfono.</p>
+  <p class="formulario__nota"><span aria-hidden="true">*</span> Campos obligatorios</p>
+  <div class="formulario__campos">
+    <div class="campo">
+      <label for="f-nombre">Nombre <span class="obligatorio" aria-hidden="true">*</span></label>
+      <input id="f-nombre" name="nombre" type="text" autocomplete="name" required maxlength="100" aria-describedby="f-nombre-error">
+      <p class="campo__error" id="f-nombre-error" hidden></p>
+    </div>
+    <div class="campo">
+      <label for="f-email">Mail <span class="obligatorio" aria-hidden="true">*</span></label>
+      <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="150" aria-describedby="f-email-error">
+      <p class="campo__error" id="f-email-error" hidden></p>
+    </div>
+    <div class="campo">
+      <label for="f-telefono">Teléfono <span class="obligatorio" aria-hidden="true">*</span></label>
+      <input id="f-telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required maxlength="30" aria-describedby="f-telefono-error">
+      <p class="campo__error" id="f-telefono-error" hidden></p>
+    </div>
+    <div class="campo">
+      <label for="f-producto">Producto <span class="opcional">(opcional)</span></label>
+      <select id="f-producto" name="producto">
+        <option value="">Elegí un producto</option>
+        <option>Hierros</option>
+        <option>Caños</option>
+        <option>Tubos</option>
+        <option>Perfiles</option>
+        <option>Chapas</option>
+        <option>Chapas para techos</option>
+      </select>
+    </div>
+    <div class="campo campo--ancho">
+      <label for="f-consulta">Consulta <span class="opcional">(opcional)</span></label>
+      <textarea id="f-consulta" name="consulta" rows="3" maxlength="2000" placeholder="{{ ejemplo_consulta }}"></textarea>
+    </div>
+    <div class="campo-trampa" aria-hidden="true">
+      <label for="f-web">No completar este campo</label>
+      <input id="f-web" name="web" type="text" tabindex="-1" autocomplete="off">
+    </div>
+  </div>
+  <button type="submit" class="boton boton--grande boton--ancho">Solicitar presupuesto</button>
+  <div class="formulario__estado" role="status" aria-live="polite" hidden></div>
+</form>

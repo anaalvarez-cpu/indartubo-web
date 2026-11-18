@@ -1,0 +1,27 @@
+<!-- Links a los otros productos. construir.py quita el producto de la página actual
+     (cada producto va entre los marcadores "otro:/ruta" y "/otro"). -->
+<section class="seccion" aria-labelledby="otros-titulo">
+  <div class="contenedor">
+    <h2 id="otros-titulo">{{ titulo_otros }}</h2>
+    <ul class="otros">
+      <!-- otro:/hierros -->
+      <li><a class="otro" href="/hierros"><img {{ foto hierros-te 400,800 }} sizes="(min-width: 1024px) 220px, (min-width: 640px) 33vw, 50vw" width="400" height="300" loading="lazy" alt=""><span>Hierros</span></a></li>
+      <!-- /otro -->
+      <!-- otro:/caños-estructurales -->
+      <li><a class="otro" href="/caños-estructurales"><img {{ foto canos-cuadrados 400,800 }} sizes="(min-width: 1024px) 220px, (min-width: 640px) 33vw, 50vw" width="400" height="300" loading="lazy" alt=""><span>Caños estructurales</span></a></li>
+      <!-- /otro -->
+      <!-- otro:/tubos -->
+      <li><a class="otro" href="/tubos"><img {{ foto tubos-redondos 400,800 }} sizes="(min-width: 1024px) 220px, (min-width: 640px) 33vw, 50vw" width="400" height="300" loading="lazy" alt=""><span>Tubos</span></a></li>
+      <!-- /otro -->
+      <!-- otro:/chapa-para-techos -->
+      <li><a class="otro" href="/chapa-para-techos"><img {{ foto techos-trapezoidal 400,800 }} sizes="(min-width: 1024px) 220px, (min-width: 640px) 33vw, 50vw" width="400" height="300" loading="lazy" alt=""><span>Chapas para techos</span></a></li>
+      <!-- /otro -->
+      <!-- otro:/perfiles -->
+      <li><a class="otro" href="/perfiles"><img {{ foto perfiles-upn 400,800 }} sizes="(min-width: 1024px) 220px, (min-width: 640px) 33vw, 50vw" width="400" height="300" loading="lazy" alt=""><span>Perfiles</span></a></li>
+      <!-- /otro -->
+      <!-- otro:/chapas -->
+      <li><a class="otro" href="/chapas"><img {{ foto chapas-semilladas 400,800 }} sizes="(min-width: 1024px) 220px, (min-width: 640px) 33vw, 50vw" width="400" height="300" loading="lazy" alt=""><span>Chapas</span></a></li>
+      <!-- /otro -->
+    </ul>
+  </div>
+</section>

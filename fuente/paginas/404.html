@@ -1,0 +1,24 @@
+---
+titulo: Página no encontrada | Indartubo
+descripcion: La página que buscás no existe o cambió de dirección. Mirá nuestros productos o pedí tu presupuesto.
+ruta: /404
+sitemap: no
+noindex: si
+base: /
+titulo_otros: Nuestros productos
+---
+<main>
+  <section class="seccion error404" aria-labelledby="error-titulo">
+    <div class="contenedor">
+      <p class="error404__codigo">Error 404</p>
+      <h1 id="error-titulo">No encontramos esta página</h1>
+      <p>Puede que la dirección haya cambiado o tenga un error de tipeo. Elegí un producto o pedinos un presupuesto: te respondemos a la brevedad.</p>
+      <div class="error404__acciones">
+        <a class="boton boton--grande" href="/#presupuesto">Pedí tu presupuesto</a>
+        <a class="boton boton--secundario" href="/">Ir al inicio</a>
+      </div>
+    </div>
+  </section>
+
+  {{> otros-productos }}
+</main>

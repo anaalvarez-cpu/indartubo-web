@@ -1,0 +1,12 @@
+{
+  "_ayuda": "Datos que se usan en todas las páginas. Cambiar acá y correr: python construir.py",
+  "sitio_url": "https://www.indartubo.com.ar",
+  "gtm_id": "GTM-NDDD4J3",
+  "form_endpoint": "",
+  "_form_endpoint": "URL que recibe el formulario y manda el mail a ventas@. Pendiente de decidir (ver CLAUDE.md).",
+  "ejemplo_consulta": "Ej.: 20 caños estructurales 40x40 de 1,6 mm, entrega en Morón.",
+  "_ejemplo_consulta": "Ejemplo del campo Consulta. Cada página puede cambiarlo con \"ejemplo_consulta:\" en su cabecera.",
+  "cloudinary_cloud_name": "",
+  "_cloudinary_cloud_name": "Cloud name de Cloudinary (solo el nombre, sin API key ni secret). Vacío = se usan las fotos locales de img/fotos/. Las fotos van en la carpeta indartubo/ con los nombres de referencias/fotos-cloudinary.md.",
+  "titulo_otros": "Otros productos"
+}

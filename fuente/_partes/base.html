@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{> gtm-head }}
+<title>{{ titulo }}</title>
+<meta name="description" content="{{ descripcion }}">
+{{ meta_extra }}
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Indartubo">
+<meta property="og:title" content="{{ titulo }}">
+<meta property="og:description" content="{{ descripcion }}">
+<meta property="og:url" content="{{ url_canonica }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ titulo }}">
+<meta name="twitter:description" content="{{ descripcion }}">
+<meta name="theme-color" content="#1A1B1F">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fuentes/gilroy-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ asset css/estilos.css }}">
+</head>
+<body>
+{{> gtm-body }}
+{{> header }}
+{{ contenido }}
+{{> footer }}
+<script src="{{ asset js/main.js }}" defer></script>
+{{> cliengo }}
+</body>
+</html>

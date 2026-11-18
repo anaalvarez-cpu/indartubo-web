@@ -1,0 +1,39 @@
+<header class="encabezado">
+  <div class="contenedor encabezado__fila">
+    <a class="encabezado__logo" href="/"><img src="img/logos/logo-indartubo.svg" alt="Indartubo, inicio" width="160" height="41"></a>
+
+    <!-- Menú de escritorio. El desplegable se abre con hover, con teclado (al enfocar
+         "Productos") y con clic (main.js alterna aria-expanded). Sin JS: hover y foco. -->
+    <nav class="menu-escritorio" aria-label="Principal">
+      <ul class="menu-escritorio__lista-principal">
+        <li class="desplegable">
+          <button class="desplegable__boton" type="button" aria-expanded="false" aria-controls="submenu-productos">Productos</button>
+          <ul class="desplegable__menu" id="submenu-productos">
+            {{> menu-productos }}
+          </ul>
+        </li>
+        <li><a href="/#nosotros">Nosotros</a></li>
+        <li><a href="/#ubicacion">Ubicación</a></li>
+      </ul>
+    </nav>
+
+    <a class="boton encabezado__cta" href="#presupuesto"><span><span class="solo-escritorio">Pedí tu </span>presupuesto</span></a>
+
+    <!-- Menú mobile (hamburguesa): funciona sin JS. -->
+    <details class="menu-movil">
+      <summary aria-label="Abrir menú">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </summary>
+      <nav class="menu-movil__panel" aria-label="Menú mobile">
+        <p>Productos</p>
+        <ul class="sin-vinetas">
+          {{> menu-productos }}
+        </ul>
+        <p>Empresa</p>
+        <a href="/#nosotros">Nosotros</a>
+        <a href="/#ubicacion">Ubicación</a>
+        <a href="#presupuesto">Pedí tu presupuesto</a>
+      </nav>
+    </details>
+  </div>
+</header>

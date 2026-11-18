@@ -1,0 +1,85 @@
+---
+titulo: Caños estructurales en San Justo | Indartubo
+descripcion: Caños estructurales redondos, cuadrados, rectangulares y ovalados, de 0,9 a 6,35 mm de espesor, en largos de 6 y 12 m. Entrega en 48 hs en Capital y GBA.
+ruta: /caños-estructurales
+producto: Caños
+foto_redes: canos-cuadrados
+ejemplo_consulta: Ej.: 20 caños estructurales 40x40 de 1,6 mm, entrega en Morón.
+---
+<main>
+
+  <!-- HERO del producto (compacto) con el formulario y el producto ya seleccionado -->
+  <section class="hero hero--producto">
+    <div class="hero__fondo hero__fondo--con-foto">
+      <img {{ foto canos-cuadrados 800,1600 }} sizes="100vw" width="1600" height="1067" alt="" fetchpriority="high">
+    </div>
+    <div class="contenedor hero__grilla">
+      <div class="hero__texto">
+        <nav class="migas" aria-label="Estás en">
+          <ol><li><a href="/">Inicio</a></li><li aria-current="page">Caños estructurales</li></ol>
+        </nav>
+        <h1>Caños estructurales</h1>
+        <p class="hero__bajada">Redondos, cuadrados, rectangulares y ovalados, de 0,9 a 6,35&nbsp;mm de espesor y en largos de 6 y 12&nbsp;m.</p>
+        <p class="hero__extra"><a class="hero__link" href="#variedades">Ver variedades <span aria-hidden="true">→</span></a></p>
+      </div>
+      <div class="hero__formulario" id="presupuesto">
+        {{> formulario }}
+      </div>
+    </div>
+  </section>
+
+  {{> diferenciales }}
+
+  <!-- VARIEDADES: cada tarjeta baja al formulario y completa "Consulta por: ..." -->
+  <section class="seccion" id="variedades" aria-labelledby="variedades-titulo">
+    <div class="contenedor">
+      <h2 id="variedades-titulo" class="titulo-con-linea">Variedades</h2>
+      <p class="seccion__bajada">Caños y tubos estructurales para uso mecánico, en todas las formas. Tocá una para cotizarla.</p>
+      <ul class="variedades">
+        <li><a class="variedad" href="#presupuesto" data-variedad="Redondos"><img class="variedad__foto" {{ foto canos-redondos 300,450 }} sizes="(min-width: 1024px) 220px, (min-width: 640px) 33vw, 50vw" width="450" height="300" loading="lazy" alt="Caños estructurales redondos apilados"><span class="variedad__pie"><span class="variedad__nombre">Redondos</span><span class="variedad__cta" aria-hidden="true">Cotizar →</span><span class="solo-lectores">, cotizar</span></span></a></li>
+        <li><a class="variedad" href="#presupuesto" data-variedad="Cuadrados"><img class="variedad__foto" {{ foto canos-cuadrados 300,450 }} sizes="(min-width: 1024px) 220px, (min-width: 640px) 33vw, 50vw" width="450" height="300" loading="lazy" alt="Caños estructurales cuadrados apilados con las puntas pintadas de amarillo"><span class="variedad__pie"><span class="variedad__nombre">Cuadrados</span><span class="variedad__cta" aria-hidden="true">Cotizar →</span><span class="solo-lectores">, cotizar</span></span></a></li>
+        <li><a class="variedad" href="#presupuesto" data-variedad="Rectangulares"><img class="variedad__foto" {{ foto canos-rectangulares 300,450 }} sizes="(min-width: 1024px) 220px, (min-width: 640px) 33vw, 50vw" width="450" height="300" loading="lazy" alt="Caños estructurales rectangulares apilados"><span class="variedad__pie"><span class="variedad__nombre">Rectangulares</span><span class="variedad__cta" aria-hidden="true">Cotizar →</span><span class="solo-lectores">, cotizar</span></span></a></li>
+        <li><a class="variedad" href="#presupuesto" data-variedad="Ovalados"><div class="variedad__foto foto-pendiente" aria-hidden="true"><span>Foto: ovalados</span></div><span class="variedad__pie"><span class="variedad__nombre">Ovalados</span><span class="variedad__cta" aria-hidden="true">Cotizar →</span><span class="solo-lectores">, cotizar</span></span></a></li>
+        <li><a class="variedad" href="#presupuesto" data-variedad="Perfil C"><div class="variedad__foto foto-pendiente" aria-hidden="true"><span>Foto: perfil c</span></div><span class="variedad__pie"><span class="variedad__nombre">Perfil C</span><span class="variedad__cta" aria-hidden="true">Cotizar →</span><span class="solo-lectores">, cotizar</span></span></a></li>
+        <li><a class="variedad" href="#presupuesto" data-variedad="Trefilados a medida"><div class="variedad__foto foto-pendiente" aria-hidden="true"><span>Foto: trefilados a medida</span></div><span class="variedad__pie"><span class="variedad__nombre">Trefilados a medida</span><span class="variedad__cta" aria-hidden="true">Cotizar →</span><span class="solo-lectores">, cotizar</span></span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- MEDIDAS / LARGOS Y ENTREGA -->
+  <section class="seccion seccion--gris" aria-labelledby="medidas-titulo">
+    <div class="contenedor ficha">
+      <div class="ficha__bloque">
+        <h2 id="medidas-titulo" class="titulo-con-linea">Medidas y terminación</h2>
+        <dl class="datos">
+          <dt>Formas</dt><dd>Redondos, cuadrados y rectangulares (uso mecánico)</dd>
+          <dt>Espesores</dt><dd>De 0,9 a 6,35 mm</dd>
+          <dt>Terminación</dt><dd>Laminado en frío, laminado en caliente y galvanizado</dd>
+        </dl>
+      </div>
+      <div class="ficha__bloque">
+        <h2 class="titulo-con-linea">Largos y entrega</h2>
+        <dl class="datos">
+          <dt>Largos</dt><dd>6 y 12 metros</dd>
+          <dt>Entrega</dt><dd>En 48 hs en Capital y GBA, con flota propia</dd>
+          <dt>Pago</dt><dd>Financiación con tarjeta</dd>
+        </dl>
+        <a class="boton" href="#presupuesto">Pedí tu presupuesto de caños estructurales</a>
+      </div>
+    </div>
+  </section>
+
+  {{> otros-productos }}
+
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "{{ sitio_url }}/" },
+    { "@type": "ListItem", "position": 2, "name": "Caños estructurales", "item": "{{ url_canonica }}" }
+  ]
+}
+</script>
