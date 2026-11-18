@@ -12,13 +12,14 @@
 *.docx
 *.pptx
 
-# --- Fuente Gilroy (licencia del cliente) ---
-# Sin estos archivos el sitio usa la fuente del sistema (ver --fuente en css/estilos.css).
-/fuente/estaticos/fuentes/
+# --- Fuente Gilroy ---
+# El cliente autorizó subir SOLO los .woff2 que usa el sitio (fuente/estaticos/fuentes/).
+# Los originales (.ttf / .otf) y cualquier otro archivo de esa carpeta quedan afuera.
+/fuente/estaticos/fuentes/*
+!/fuente/estaticos/fuentes/*.woff2
 *.ttf
 *.otf
 *.woff
-*.woff2
 
 # --- Generado por construir.py (se vuelve a armar con: python construir.py [--preview]) ---
 /sitio/
