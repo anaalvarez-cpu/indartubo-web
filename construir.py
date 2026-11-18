@@ -3,6 +3,9 @@ Arma las páginas completas del sitio a partir de las piezas de `fuente/`.
 
 Uso:   python construir.py            → versión de producción en sitio/
        python construir.py --preview  → versión de prueba en preview/ (servicio aparte)
+       python construir.py --preview --base /indartubo-web
+                                      → versión de prueba para una subcarpeta (GitHub Pages:
+                                        https://<usuario>.github.io/indartubo-web/)
 
 - Lee `fuente/config.json` (ID de GTM, URL del formulario, URL del sitio).
 - Junta cada página de `fuente/paginas/` con las piezas de `fuente/_partes/`.
@@ -28,6 +31,10 @@ Versión de prueba (--preview), para el servicio indartubo-preview:
   envía nada (muestra un aviso). Cliengo queda activo. preview/ trae su propio Dockerfile
   y nginx.conf: se deploya con  gcloud run deploy indartubo-preview --source preview
 
+--base /carpeta (solo junto con --preview): para publicar en una subcarpeta. Antepone la
+  carpeta a los links internos que empiezan con "/" (ej. /hierros → /indartubo-web/hierros)
+  y al <base> de la 404. CSS, JS, fuentes e imágenes ya usan rutas relativas.
+
 Además, en cada página: los links del menú a la página actual llevan
 aria-current="page", y en "Otros productos" se quita el producto actual
 (bloques marcados en _partes/otros-productos.html).
@@ -41,6 +48,10 @@ from datetime import date
 from pathlib import Path
 from urllib.parse import quote
 
+for _flujo in (sys.stdout, sys.stderr):  # acentos bien en la consola de Windows
+    if hasattr(_flujo, "reconfigure"):
+        _flujo.reconfigure(encoding="utf-8", errors="replace")
+
 RAIZ = Path(__file__).resolve().parent
 FUENTE = RAIZ / "fuente"
 PARTES = FUENTE / "_partes"
@@ -52,6 +63,22 @@ if PREVIEW:
     DIR_PREVIEW = RAIZ / "preview"
     SALIDA = DIR_PREVIEW / "sitio"
 FRANJA_PRUEBA = '<div class="franja-prueba" role="note">Versión de prueba</div>'
+
+
+def _leer_base() -> str:
+    """--base /carpeta → "/carpeta" (sin barra final). Vacío si no se pasa."""
+    args = sys.argv[1:]
+    if "--base" not in args:
+        return ""
+    i = args.index("--base")
+    if i + 1 >= len(args) or not args[i + 1].startswith("/"):
+        sys.exit("ERROR: --base necesita una carpeta que empiece con /, ej.: --base /indartubo-web")
+    if not PREVIEW:
+        sys.exit("ERROR: --base solo se usa junto con --preview (producción va en la raíz del dominio)")
+    return args[i + 1].rstrip("/")
+
+
+BASE = _leer_base()  # ej. "/indartubo-web" para GitHub Pages; "" en producción
 
 RE_PIEZA = re.compile(r"\{\{>\s*([\w-]+)\s*\}\}")
 RE_ASSET = re.compile(r"\{\{\s*asset\s+([^\s}]+)\s*\}\}")
@@ -149,7 +176,7 @@ def meta_extra(cab: dict, datos: dict, sitio_url: str, origen: str) -> str:
     elif cab.get("noindex") == "si":
         lineas.append('<meta name="robots" content="noindex">')
     if cab.get("base"):  # 404: se sirve en cualquier ruta (/a/b/c): rutas relativas desde la raíz
-        lineas.append(f'<base href="{cab["base"]}">')
+        lineas.append(f'<base href="{cab["base"]}">')  # con --base, ajustes_por_pagina le antepone la carpeta
     else:
         lineas.append('<link rel="canonical" href="%s">' % datos["url_canonica"])
     if cab.get("foto_redes"):
@@ -187,6 +214,8 @@ def ajustes_por_pagina(html: str, cab: dict, origen: str) -> str:
         html = html.replace(f'<a href="{ruta}">', f'<a href="{ruta}" aria-current="page">')
     if "<form" not in html:  # página sin formulario (ej. 404): los "presupuesto" van al de la home
         html = html.replace('href="#presupuesto"', 'href="/#presupuesto"')
+    if BASE:  # subcarpeta (GitHub Pages): links internos "/x" → "/carpeta/x" (no toca "//dominio")
+        html = re.sub(r'href="/(?!/)', f'href="{BASE}/', html)
     if PREVIEW:  # franja arriba y formulario que no envía (main.js muestra un aviso)
         html = html.replace("<body>\n", "<body>\n" + FRANJA_PRUEBA + "\n", 1)
         html = html.replace('<form class="formulario"', '<form class="formulario" data-prueba="si"')

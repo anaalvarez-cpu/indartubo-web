@@ -1,0 +1,48 @@
+# Vista previa en GitHub Pages: https://<usuario>.github.io/<repo>/
+# En cada push a main arma la VERSIÓN DE PRUEBA (noindex, sin GTM, formulario que no envía,
+# franja "Versión de prueba") preparada para la subcarpeta /<repo>/ y la publica.
+# La versión de producción (python construir.py → sitio/) no se toca.
+name: Vista previa en GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:   # permite publicarla a mano desde la pestaña Actions
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  armar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Armar la versión de prueba para la subcarpeta del repo
+        run: python construir.py --preview --base "/${{ github.event.repository.name }}"
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: preview/sitio
+
+  publicar:
+    needs: armar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.publicacion.outputs.page_url }}
+    steps:
+      - id: publicacion
+        uses: actions/deploy-pages@v4
